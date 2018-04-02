@@ -1,0 +1,22 @@
+#ifndef H_GTUOS
+#define H_GTUOS
+
+#include "8080emuCPP.h"
+
+using namespace std;
+
+class GTUOS{
+	public:
+		uint64_t handleCall(const CPU8080 & cpu);
+		int calculateCycle(const CPU8080 & cpu); 
+		void PRINT_B(const CPU8080 & cpu);
+		void READ_B(const CPU8080 & cpu);
+		void PRINT_MEM(const CPU8080 & cpu);
+		void READ_MEM(const CPU8080 & cpu);
+		void PRINT_STR(const CPU8080 & cpu);
+		void READ_STR(const CPU8080 & cpu);
+		void GET_RND(const CPU8080 & cpu);
+		void saveMemory(char *filename, const CPU8080& cpu);
+};
+
+#endif
